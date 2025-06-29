@@ -1,4 +1,4 @@
-# Siple grid layout for a calculator
+# Simple grid layout for a calculator
 
 This is a minimal, non-functional layout built using html and css grid to replicate a calculator interface.
 
