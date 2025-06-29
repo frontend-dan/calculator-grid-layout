@@ -1,6 +1,6 @@
 # Siple grid layout for a calculator
 
-This is simply a non-functional layout that uses grid to build calculator's layout.
+This is a minimal, non-functional layout built using html and css grid to replicate a calculator interface.
 
 [Live demo](https://frontend-dan.github.io/calculator-grid-layout)
 
