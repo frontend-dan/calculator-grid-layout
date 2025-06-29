@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
+
+* {
+    font-family: "Quicksand", sans-serif;
+    box-sizing: border-box;
+}
+
+:root {
+    /* --clr-bg-primary: hsl(123, 98%, 77%); */
+    --clr-bg-primary: hsl(223, 6%, 10%);
+    --clr-bg-content-1: hsl(223, 6%, 12%);
+    --clr-bg-content-2: hsl(223, 6%, 25%);
+    --clr-bg-content-3: hsl(223, 6%, 30%);
+    --clr-bg-content-4: hsl(223, 6%, 40%);
+    --clr-text-primary: hsl(227, 5%, 65%);
+    --clr-text-secondary: hsl(123, 98%, 77%);
+}
+
+body {
+    background-color: var(--clr-bg-primary);
+    color: var(--clr-text-primary);
+}
+
+.calc-box {
+    max-width: fit-content;
+    /* outline: 1px red solid; */
+
+    margin: 1rem auto;
+
+    background-color: var(--clr-bg-content-1);
+
+    border: 1px solid var(--clr-bg-content-3);
+
+    background-image: radial-gradient(
+        circle at 50% 125%,
+        var(--clr-bg-content-1),
+        var(--clr-bg-content-2)
+    );
+
+    padding: 2rem;
+    border-radius: 2rem;
+
+    display: grid;
+    gap: 0.5rem;
+
+    grid-template:
+        "input input input input" min-content
+        "clear brackets percent divide" min-content
+        "seven eight nine multiply" min-content
+        "four five six subtract" min-content
+        "one two three add" min-content
+        "plmin zero dot equal" min-content
+        / min-content min-content min-content min-content;
+
+    & .input {
+        grid-column: span 4;
+        aspect-ratio: auto;
+    }
+}
+
+.input {
+    font-size: 2rem;
+    padding: 1rem 2rem;
+    margin-bottom: 1rem;
+    border-radius: 4rem;
+    width: 100%;
+    border: transparent;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.4);
+    text-align: right;
+
+    &:focus {
+        outline: transparent;
+    }
+}
+
+.btn {
+    cursor: pointer;
+
+    font-size: 2rem;
+    aspect-ratio: 1 /1;
+    padding: 1rem;
+
+    background-color: transparent;
+
+    color: inherit;
+
+    border-radius: 4rem;
+    border: transparent;
+    /* border: 1px solid var(--clr-bg-content-3); */
+
+    transition: all ease-in-out 100ms;
+
+    &:hover {
+        background-color: var(--clr-bg-content-3);
+        color: white;
+    }
+
+    &.action {
+        color: var(--clr-text-secondary);
+    }
+}
